@@ -6,6 +6,7 @@ const router = Router()
 // router.get('/createUser', UserController.createUser) -> Router to render front end page
 router.post('/createUserSave', UserController.createValidation, UserController.createUserSave)
 router.get('/getUsers', UserController.getAllValidation, UserController.getAll)
+router.get('/getUserById/:id', UserController.getByIdValidation, UserController.getUserById)
 
 
 export { router }
