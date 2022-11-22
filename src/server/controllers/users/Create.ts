@@ -1,4 +1,4 @@
-import { Request, Response } from 'express'
+import { Request, RequestHandler, Response } from 'express'
 import { StatusCodes } from 'http-status-codes'
 import * as yup from 'yup'
 
@@ -22,8 +22,8 @@ export const createValidation = validation((getSchema) => ({
     })),
 }))
 
-export const createUserSave = async (req: Request< {}, {}, IUser >, res: Response) => {
-    // console.log(req.body)
+export const createUserSave: RequestHandler = async (req: Request< {}, {}, IUser >, res: Response) => {
+    console.log(req.body)
 
     return res.send('Create!')
 }
