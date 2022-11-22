@@ -8,6 +8,7 @@ router.post('/createUserSave', UserController.createValidation, UserController.c
 router.get('/getUsers', UserController.getAllValidation, UserController.getAll)
 router.get('/getUserById/:id', UserController.getByIdValidation, UserController.getUserById)
 router.delete('/deleteUserById/:id', UserController.deleteUserByIdValidation, UserController.deleteUserById)
+router.put('/updateUserById/:id', UserController.updateUserByIdValidation, UserController.updateUserById)
 
 
 export { router }
